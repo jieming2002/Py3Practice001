@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1560e100-2c15-4b13-9616-7e85f592ecf9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/py3011Loop.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/py3012Iterator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/py3013Function.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="1560e100-2c15-4b13-9616-7e85f592ecf9" name="Default" comment="" />
     <ignored path="Py3Practice001.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
