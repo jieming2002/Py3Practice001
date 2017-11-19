@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1560e100-2c15-4b13-9616-7e85f592ecf9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/py3005String.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/py3006List.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/py3007Tuple.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/py3008Dict.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/py3009FirstStep.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/py3010IfElse.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/py3011Loop.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/py3012Iterator.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/py3013Function.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="1560e100-2c15-4b13-9616-7e85f592ecf9" name="Default" comment="" />
     <ignored path="Py3Practice001.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -133,8 +122,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -481,7 +470,7 @@
     <frame x="17" y="439" width="1893" height="719" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26132023" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.264048" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854208" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
