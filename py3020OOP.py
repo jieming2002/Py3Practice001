@@ -41,7 +41,7 @@ class people:
 python 从左至右搜索 即方法在子类中未找到时，从左到右查找基类中是否包含方法。
 '''
 class student(people):
-    grade = ''
+    grade = 0
     def __init__(self, n, a, w, g):
         # 调用父类的构造函数
         people.__init__(self, n, a, w)
@@ -74,16 +74,20 @@ class superStudent(student, speaker):
     def __write(self):
         print('写作文')
     # 我们可以对类的专有方法进行重载
-    def __str__(self):
-        return '  '
+    def __str__(self): # 返回类的字符串信息
+        return '超级学生：{0}，年龄：{1}，年级：{2}，演讲主题：{3}'.format(self.name, self.age, self.grade, self.topic)
+    def __add__(self, other): #计算两个类实例的和，加法
+        return superStudent(self.name + other.name,
+                            self.age + other.age,
+                            99,
+                            self.grade + other.grade,
+                            self.topic + other.topic)
 
 def testSuperStudnet():
     s = superStudent('小明', 22, 55, 9, '人生')
     s.speak()  #方法名同，默认调用的是在括号中排前地父类的方法
-
-
-
-
+    s2 = superStudent('小唐', 23, 66, 11, '人工智能')
+    print(s + s2)
 
 # 从这里开始执行代码，上面负责定义
 if __name__ == '__main__':
