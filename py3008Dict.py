@@ -22,7 +22,7 @@ print('a = {0}'.format(a))
 dict2 = dict1.copy()
 print('dict2 = {0}'.format(dict2))
 
-s = 'abcde'
+s = 'anaconda'
 dict1 = dict.fromkeys(s) # 创建一个新字典，以序列中元素做字典的键，val为字典所有键对应的初始值
 print('dict1 = {0}'.format(dict1))
 
@@ -30,7 +30,13 @@ a = dict1.get('b') #返回指定键的值，
 print('a = {0}'.format(a))
 
 list1 = dict1.items()
+print('dict1.items = {0}'.format(list1))
+list1 = list(list1)
 print('list1 = {0}'.format(list1))
+list1.sort()
+print('list1 = {0}'.format(list1))
+print('list1[:2] = {0}'.format(list1[:2]))
+print('list1[-2:] = {0}'.format(list1[-2:]))
 
 list1 = dict1.keys()
 print('list1 = {0}'.format(list1))

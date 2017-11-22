@@ -30,5 +30,23 @@ print(hellos)
 s = repr((x, y, ('Google', 'Runoob')))
 print(s)
 
+# 这里有两种方式输出一个平方与立方的表:
+for x in range(1,11):
+    # 这个例子展示了字符串对象的 rjust() 方法, 它可以将字符串靠右, 并在左边填充空格。
+    print(repr(x).rjust(3), repr(x**2).rjust(4), repr(x**3).rjust(5))
+
+for x in range(1,11):
+    # 还有类似的方法, 如 ljust() 和 center()
+    print(repr(x).ljust(3), repr(x**2).ljust(4), repr(x**3).ljust(5))
+    # 另一个方法 zfill(), 它会在数字的左边填充 0
+
+for x in range(1,11):
+    # 还有类似的方法, 如 ljust() 和 center()
+    print(repr(x).center(3), repr(x**2).center(4), repr(x**3).center(5))
+
+for x in range(1,11):
+    print('{0:3d} {1:4d} {2:5d}'.format(x, x**2, x**3))
+
+
 
 
