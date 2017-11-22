@@ -95,14 +95,29 @@ def devide(x, y):
     finally:
         print('执行 finally 语句')
 
+def sysClear():
+    ''' 预定义的清理行为
+    一些对象定义了标准的清理行为，无论系统是否成功的使用了它，一旦不需要它了，那么这个标准的清理行为就会执行。
+    '''
+    for line in open('./data/test.txt'):
+        print(line, end='')
+    # 以上这段代码的问题是，当执行完毕后，文件会保持打开状态，并没有被关闭。
+    # 关键词 with 语句就可以保证诸如文件之类的对象在使用完之后一定会正确的执行他的清理方法:
+    print('\r\n')
+    with open('./data/test.txt') as f:
+        for line in f:
+            print(line, end='')
+    # 以上这段代码执行完毕后，就算在处理过程中出问题了，文件 f 总是会关闭。
+
 if __name__ == '__main__':
     # inputInt()
     # errorHandler()
     # useElseInTry('./data/')
     # raiseError()
     # raiseMyError()
-    devide(1, 2)
-    devide(2, 0)
-    devide('a', 'b')
+    # devide(1, 2)
+    # devide(2, 0)
+    # devide('a', 'b')
+    sysClear()
 
 
