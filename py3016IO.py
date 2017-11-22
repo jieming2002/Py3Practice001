@@ -82,11 +82,95 @@ print('Runoob:{Runoob:d}; Google:{Google:d}; Taobao:{Taobao:d}'.format(**table))
 # str.format() 比较新的函数
 # 大多数 Python 代码仍然使用 % 操作符。但是因为这种旧式的格式化最终会从该语言中移除, 应该更多的使用 str.format().
 
+# 打开一个文件 'w' 只用于写 (如果存在同名文件则将被删除),
+f = open('./data/test.txt', 'w')
+f.write('Python 是一个非常好的语言。\n是的，的确非常好!!\n')
+f.close()
 
+# 只读方式打开文件，文件的指针将会放在文件的开头。
+f = open('./data/test.txt', 'r')
+s = f.read()
+print(s)
 
+f = open('./data/test.txt', 'r')
+print('读取一行')
+s = f.readline()
+print(s)
 
+f = open('./data/test.txt', 'r')
+print('读取多行')
+s = f.readlines(2)
+print(s)
 
+f = open('./data/test.txt', 'r')
+print('迭代一个文件对象然后读取每行:')
+for line in f:
+    print(line,end='')
+f.close()
 
+# 打开文件，追加内容
+f = open("./data/test.txt", "a+")
+val = ['小明', '小张', '兰兰', 2]
+f.write(str(val))
+# 返回文件对象当前所处的位置, 它是从文件开头开始算起的字节数。
+a = f.tell()
+print('a = ', a)
+
+s = f.read()
+print('s = ', s)
+
+# 如果要改变文件当前的位置, 可以使用 f.seek(offset, from_what) 函数。
+f.seek(5) # 移动到文件的第六个字节
+s = f.read(11)
+print('s = ', s)
+# 关闭文件并释放系统的资源
+f.close()
+
+# 当处理一个文件对象时, 使用 with 关键字是非常好的方式。在结束后, 它会帮你正确的关闭文件。
+with open('./data/test.txt', 'r') as f:
+    read_data = f.read()
+    print(read_data)
+f.close()
+
+# python 的 pickle 模块实现了基本的数据序列和反序列化。
+import pickle
+
+# 使用 pickle 模块将数据对象保存到文件
+data1 = {'a': [1, 2.0, 3, 4+6j],
+         'b': ('string', u'Unicode string'),
+         'c': None}
+print(data1)
+selfref_list = [1, 2, 3]
+selfref_list.append(selfref_list)
+print(selfref_list)
+print('存入文件')
+f = open('./data/test1.pkl', 'wb')
+
+# Pickle dictionary using protocol 0.
+pickle.dump(data1, f)
+
+# Pickle the list using the highest protocol available.
+pickle.dump(selfref_list, f, -1)
+f.close()
+
+#使用pickle模块从文件中重构python对象
+f = open('./data/test1.pkl', 'rb')
+print('读取文件')
+data1 = pickle.load(f)
+print(data1)
+
+data2 = pickle.load(f)
+print(data2)
+f.close()
+
+# python文件写入也可以进行网站爬虫
+from urllib import request
+
+response = request.urlopen('http://www.baidu.com/')     # 打开网站
+f = open('./data/test2.txt', 'w')
+n = f.write(str(response.read()))
+print('n = ', n)
+f.close()
 
 
 
