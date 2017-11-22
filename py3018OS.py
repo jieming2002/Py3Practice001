@@ -25,8 +25,3 @@ f = open(workDir + os.sep + 'data' + os.sep + 'fileList.txt', 'w')
 f.writelines(fileList)
 f.close()
 
-print() ' '
-
-a ) b j &
-
-
